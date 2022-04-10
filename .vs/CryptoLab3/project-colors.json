@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3f7752e2-4c06-445a-91d1-c19a0f477a80": {
+      "ProjectGuid": "3f7752e2-4c06-445a-91d1-c19a0f477a80",
+      "DisplayName": "CryptoLab3",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "03b6f6d1-a77b-4e8d-bf99-a94b49adc4c1": {
+      "ProjectGuid": "03b6f6d1-a77b-4e8d-bf99-a94b49adc4c1",
+      "DisplayName": "CryptoLab3",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
