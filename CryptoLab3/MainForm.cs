@@ -131,18 +131,27 @@ namespace CryptoLab3
                     break;
 
                 case 2:
-                    (int[] x2, TimeSpan[][] y2, TimeSpan[][] ignore, double[][] ignore2) = RSATester.TimeAndGrowthFromMessageLength();
-                    //TODO Plot(x2, y2);
+                    foreach (int keySize in new[] {256, 512, 1024 })
+                    {
+                        (int[] x2, TimeSpan[] y2, TimeSpan[] ignore, double[] ignore2) = RSATester.TimeAndGrowthFromMessageLength(keySize);
+                        //TODO Plot(x2, y2);
+                    }
                     break;
 
                 case 3:
-                    (int[] x3, TimeSpan[][] ignore3, TimeSpan[][] y3, double[][] ignore4) = RSATester.TimeAndGrowthFromMessageLength();
-                    //TODO Plot(x3, y3);
+                    foreach (int keySize in new[] { 256, 512, 1024 })
+                    {
+                        (int[] x3, TimeSpan[] ignore3, TimeSpan[] y3, double[] ignore4) = RSATester.TimeAndGrowthFromMessageLength(keySize);
+                        //TODO Plot(x3, y3);
+                    }
                     break;
 
                 case 4:
-                    (int[] x4, TimeSpan[][] ignore5, TimeSpan[][] ignore6, double[][] y4) = RSATester.TimeAndGrowthFromMessageLength();
-                    //TODO Plot(x4, y4);
+                    foreach (int keySize in new[] { 256, 512, 1024 })
+                    {
+                        (int[] x4, TimeSpan[] ignore5, TimeSpan[] ignore6, double[] y4) = RSATester.TimeAndGrowthFromMessageLength(keySize);
+                        //TODO Plot(x4, y4);
+                    }
                     break;
 
                 default:

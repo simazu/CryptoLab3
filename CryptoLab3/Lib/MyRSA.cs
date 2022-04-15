@@ -30,10 +30,18 @@ namespace CryptoLab3.Lib
             }
         }
       
+        public MyRSA(int pLength, int qLength, int openExponent = 65537)
+        {
+            P = Algorithms.GetSimpleRandomNumber(pLength);
+            Q = Algorithms.GetSimpleRandomNumber(qLength); ;  
+            OpenExponent = openExponent;
+            KeySize = pLength + qLength;
+        }
+
         public MyRSA(BigInteger p, BigInteger q, int openExponent = 65537)
         {
             P = p;
-            Q = q;  
+            Q = q; ;
             OpenExponent = openExponent;
             KeySize = (int)(P.GetBitLength() + Q.GetBitLength());
         }
