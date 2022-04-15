@@ -23,14 +23,17 @@ namespace CryptoLab3.Lib
         {
             KeySize = keySize;
             OpenExponent = openExponent;
-            P = Algorithms.GetSimpleRandomNumber(KeySize / 2);
-            Q = Algorithms.GetSimpleRandomNumber(KeySize / 2);
+            while (ClosedExponent() <= 0)
+            {
+                P = Algorithms.GetSimpleRandomNumber(KeySize / 2);
+                Q = Algorithms.GetSimpleRandomNumber(KeySize / 2);
+            }
         }
       
         public MyRSA(BigInteger p, BigInteger q, int openExponent = 65537)
         {
             P = p;
-            Q = q;
+            Q = q;  
             OpenExponent = openExponent;
             KeySize = (int)(P.GetBitLength() + Q.GetBitLength());
         }

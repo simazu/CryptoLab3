@@ -26,11 +26,12 @@ namespace CryptoLab3
         private void testsButton_Click(object sender, EventArgs e)
         {
             testsOutputRichTextBox.Clear();
-            foreach (int openExponent in new int[] {3, 65537 })
+            foreach (int openExponent in new[] {3, 65537 })
             {
                 testsOutputRichTextBox.Text += $"\n____________________________\nencrypted text test, e = {openExponent}\n____________________________\n\n";
                 MyRSA rsa = new MyRSA(128, openExponent);
                 rsa.Encrypt("text.txt");
+
                 string encryptedText = Converter.FileToBits("encrypted.txt");
                 Test(encryptedText);
             }
@@ -48,10 +49,9 @@ namespace CryptoLab3
             }
             testsOutputRichTextBox.Text += "\n";
 
-            (double[], double[]) pokerTestResult = MSequenceTester.PokerTest(sequence);
-            for (int i = 0; i < 7; i++)
-                testsOutputRichTextBox.Text += $"Poker test, P{i + 1} = {pokerTestResult.Item1[i]}, P{i + 1}ref = {pokerTestResult.Item2[i]}\n";
-            testsOutputRichTextBox.Text += "\n";
+            (double, double, double) pokerTestResult = MSequenceTester.PokerTest(sequence);           
+            testsOutputRichTextBox.Text += $"Poker test, {pokerTestResult.Item3} - AlphaMax: {pokerTestResult.Item1}, AlphaMin: {pokerTestResult.Item2}" +
+                $", test {((pokerTestResult.Item3 <= pokerTestResult.Item1 && pokerTestResult.Item1 >= pokerTestResult.Item2) ? "passed" : "failed")}\n\n";
 
             int[] k = { 1, 2, 8, 9 };
             foreach (int i in k)
@@ -78,8 +78,8 @@ namespace CryptoLab3
             File.WriteAllText(PrivateKeyFilePath, rsa.GetPrivateKey().Item1.ToString() + "\n" + rsa.GetPrivateKey().Item2.ToString());
 
             rsa.Encrypt(fileName);
-
-
+            testsOutputRichTextBox.Clear();
+            testsOutputRichTextBox.Text += "encrypted";
         }
 
         private void decryptButton_Click(object sender, EventArgs e)
@@ -89,6 +89,8 @@ namespace CryptoLab3
             (BigInteger, BigInteger) privateKey = (BigInteger.Parse(sr.ReadLine()), BigInteger.Parse(sr.ReadLine()));
             sr.Close();
             MyRSA.Decrypt(fileName, privateKey);
+            testsOutputRichTextBox.Clear();
+            testsOutputRichTextBox.Text += "decrypted";
         }
 
         private void testWrongPQButton_Click(object sender, EventArgs e)

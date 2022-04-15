@@ -61,7 +61,7 @@ namespace CryptoLab3.Lib
             return (Math.Round(alphaMin, 5), Math.Round(alphaMax, 5), Math.Round(criteria, 5));
         }
 
-        public static (double[], double[]) PokerTest(string sequence)
+        public static (double, double, double) PokerTest(string sequence)
         {
             double sequenceLength = sequence.Length;
             double[] P = new double[7];
@@ -111,9 +111,7 @@ namespace CryptoLab3.Lib
                 if (quentets[i].Count == 1)
                     P[6]++;
             }
-            for (int i = 0; i < 7; i++)
-                P[i] = Math.Round(P[i] / quentets.Length, 5);
-
+            
             Pref[0] = (q - 1) * (q - 2) * (q - 3) * (q - 4) / Math.Pow(q, 4);
             Pref[1] = 10 * (q - 1) * (q - 2) * (q - 3) / Math.Pow(q, 4);
             Pref[2] = 15 * (q - 1) * (q - 2) / Math.Pow(q, 4);
@@ -122,7 +120,14 @@ namespace CryptoLab3.Lib
             Pref[5] = 5 * (q - 1) / Math.Pow(q, 4);
             Pref[6] = 1 / Math.Pow(q, 4);
 
-            return (P, Pref);
+            for (int i = 0; i < 7; i++)
+                Pref[i] = Pref[i] * quentets.Length;
+
+            double criteria = 0;
+            for (int i = 0; i < 7; i++)
+                criteria += Math.Pow(P[i] - Pref[i], 2) / Pref[i];
+
+            return (11.071, 1.61, Math.Round(criteria, 5));
         }
 
         public static (double, double) CorrelationTest(string sequence, int k)

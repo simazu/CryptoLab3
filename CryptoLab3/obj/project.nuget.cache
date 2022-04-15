@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OaXTsaH+zGDp7CoZTOrpA91Y6btqRI38Dl2NscYwFRs29MhKnXJt8WD+gqM7F4C/63SL7ec3ASnYhfHV9RH3Cw==",
+  "dgSpecHash": "CAr/Rpanqj57qW9l1fwD1Cw5Epw9tfgKLE6bmH+B4VQJggXWheQrzI/syndIEkGYXesWbRDJhLbRTu+q5ryKTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mutig\\Downloads\\CryptoLab3 — копия\\CryptoLab3\\CryptoLab3.csproj",
+  "projectFilePath": "C:\\Users\\mutig\\Desktop\\sas\\Учеба\\8 СЕМЕСТР\\КМЗИ\\лабы\\CryptoLab3\\CryptoLab3\\CryptoLab3.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mutig\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\mutig\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512",
     "C:\\Users\\mutig\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
     "C:\\Users\\mutig\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
     "C:\\Users\\mutig\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"

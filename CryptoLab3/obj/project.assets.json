@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mutig\\Downloads\\CryptoLab3 — копия\\CryptoLab3\\CryptoLab3.csproj",
+      "projectUniqueName": "C:\\Users\\mutig\\Desktop\\sas\\Учеба\\8 СЕМЕСТР\\КМЗИ\\лабы\\CryptoLab3\\CryptoLab3\\CryptoLab3.csproj",
       "projectName": "CryptoLab3",
-      "projectPath": "C:\\Users\\mutig\\Downloads\\CryptoLab3 — копия\\CryptoLab3\\CryptoLab3.csproj",
+      "projectPath": "C:\\Users\\mutig\\Desktop\\sas\\Учеба\\8 СЕМЕСТР\\КМЗИ\\лабы\\CryptoLab3\\CryptoLab3\\CryptoLab3.csproj",
       "packagesPath": "C:\\Users\\mutig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mutig\\Downloads\\CryptoLab3 — копия\\CryptoLab3\\obj\\",
+      "outputPath": "C:\\Users\\mutig\\Desktop\\sas\\Учеба\\8 СЕМЕСТР\\КМЗИ\\лабы\\CryptoLab3\\CryptoLab3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
+            "version": "[5.0.16, 5.0.16]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -86,7 +86,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

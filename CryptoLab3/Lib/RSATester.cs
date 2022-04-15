@@ -27,7 +27,7 @@ namespace CryptoLab3.Lib
                 keySizes.Add(keySize);
                 factorizationTimes.Add(watch.Elapsed);
             }
-            for (; watch.Elapsed.TotalSeconds < 20; keySize++)
+            for (; watch.Elapsed.TotalSeconds < 20; keySize+=2)
             {
                 MyRSA rsa = new MyRSA(keySize);
                 BigInteger module = rsa.GetPublicKey().Item2;

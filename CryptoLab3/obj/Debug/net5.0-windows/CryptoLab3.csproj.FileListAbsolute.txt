@@ -51,3 +51,21 @@ C:\Users\mutig\Downloads\CryptoLab3 — копия\CryptoLab3\obj\Debug\net5.0-w
 C:\Users\mutig\Downloads\CryptoLab3 — копия\CryptoLab3\obj\Debug\net5.0-windows\ref\CryptoLab3.dll
 C:\Users\mutig\Downloads\CryptoLab3 — копия\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.pdb
 C:\Users\mutig\Downloads\CryptoLab3 — копия\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.genruntimeconfig.cache
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\CryptoLab3.exe
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\CryptoLab3.deps.json
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\CryptoLab3.runtimeconfig.json
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\CryptoLab3.runtimeconfig.dev.json
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\CryptoLab3.dll
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\ref\CryptoLab3.dll
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\bin\Debug\net5.0-windows\CryptoLab3.pdb
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.csproj.AssemblyReference.cache
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.MainForm.resources
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.csproj.GenerateResource.cache
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.AssemblyInfoInputs.cache
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.AssemblyInfo.cs
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.csproj.CoreCompileInputs.cache
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.dll
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\ref\CryptoLab3.dll
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.pdb
+C:\Users\mutig\Desktop\sas\Учеба\8 СЕМЕСТР\КМЗИ\лабы\CryptoLab3\CryptoLab3\obj\Debug\net5.0-windows\CryptoLab3.genruntimeconfig.cache
