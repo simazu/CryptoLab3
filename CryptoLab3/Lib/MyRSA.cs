@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CryptoLab3.Lib
 {
@@ -33,7 +29,7 @@ namespace CryptoLab3.Lib
         public MyRSA(int pLength, int qLength, int openExponent = 65537)
         {
             P = Algorithms.GetSimpleRandomNumber(pLength);
-            Q = Algorithms.GetSimpleRandomNumber(qLength); ;  
+            Q = Algorithms.GetSimpleRandomNumber(qLength); 
             OpenExponent = openExponent;
             KeySize = pLength + qLength;
         }

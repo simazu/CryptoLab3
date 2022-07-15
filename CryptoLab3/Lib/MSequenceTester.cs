@@ -68,10 +68,10 @@ namespace CryptoLab3.Lib
             double[] Pref = new double[7];
             int q = 10;
             Dictionary<int, int>[] quentets = new Dictionary<int, int>[(int)sequenceLength / 32 / 5];  
-            for (int i = 0;i < quentets.Length; i++)
+            for (int i = 0; i < quentets.Length; i++)
             {
                 quentets[i] = new Dictionary<int, int>();
-                for (int j = 0;j < 5; j++)
+                for (int j = 0; j < 5; j++)
                 {
                     string subSequence;
                     try

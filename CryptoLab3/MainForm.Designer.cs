@@ -30,6 +30,7 @@ namespace CryptoLab3
         private void InitializeComponent()
         {
             this.sequencePanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.testWrongPQButton = new System.Windows.Forms.Button();
             this.testCryptogramButton = new System.Windows.Forms.Button();
             this.testsOutputLabel = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace CryptoLab3
             // sequencePanel
             // 
             this.sequencePanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.sequencePanel.Controls.Add(this.button1);
             this.sequencePanel.Controls.Add(this.testWrongPQButton);
             this.sequencePanel.Controls.Add(this.testCryptogramButton);
             this.sequencePanel.Controls.Add(this.testsOutputLabel);
@@ -54,15 +56,25 @@ namespace CryptoLab3
             this.sequencePanel.Controls.Add(this.testsOutputRichTextBox);
             this.sequencePanel.Controls.Add(this.encryptButton);
             this.sequencePanel.Location = new System.Drawing.Point(10, 9);
-            this.sequencePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sequencePanel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.sequencePanel.Name = "sequencePanel";
-            this.sequencePanel.Size = new System.Drawing.Size(331, 271);
+            this.sequencePanel.Size = new System.Drawing.Size(331, 599);
             this.sequencePanel.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(4, 567);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Differnt length keys";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // testWrongPQButton
             // 
-            this.testWrongPQButton.Location = new System.Drawing.Point(167, 247);
-            this.testWrongPQButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.testWrongPQButton.Location = new System.Drawing.Point(167, 540);
+            this.testWrongPQButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.testWrongPQButton.Name = "testWrongPQButton";
             this.testWrongPQButton.Size = new System.Drawing.Size(161, 22);
             this.testWrongPQButton.TabIndex = 5;
@@ -72,8 +84,8 @@ namespace CryptoLab3
             // 
             // testCryptogramButton
             // 
-            this.testCryptogramButton.Location = new System.Drawing.Point(3, 247);
-            this.testCryptogramButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.testCryptogramButton.Location = new System.Drawing.Point(4, 540);
+            this.testCryptogramButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.testCryptogramButton.Name = "testCryptogramButton";
             this.testCryptogramButton.Size = new System.Drawing.Size(161, 22);
             this.testCryptogramButton.TabIndex = 2;
@@ -84,16 +96,17 @@ namespace CryptoLab3
             // testsOutputLabel
             // 
             this.testsOutputLabel.AutoSize = true;
-            this.testsOutputLabel.Location = new System.Drawing.Point(3, 2);
+            this.testsOutputLabel.Location = new System.Drawing.Point(4, 2);
+            this.testsOutputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.testsOutputLabel.Name = "testsOutputLabel";
-            this.testsOutputLabel.Size = new System.Drawing.Size(73, 15);
+            this.testsOutputLabel.Size = new System.Drawing.Size(45, 15);
             this.testsOutputLabel.TabIndex = 3;
-            this.testsOutputLabel.Text = "Tests Output";
+            this.testsOutputLabel.Text = "Output";
             // 
             // decryptButton
             // 
-            this.decryptButton.Location = new System.Drawing.Point(167, 221);
-            this.decryptButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.decryptButton.Location = new System.Drawing.Point(167, 515);
+            this.decryptButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.decryptButton.Name = "decryptButton";
             this.decryptButton.Size = new System.Drawing.Size(161, 22);
             this.decryptButton.TabIndex = 4;
@@ -103,17 +116,17 @@ namespace CryptoLab3
             // 
             // testsOutputRichTextBox
             // 
-            this.testsOutputRichTextBox.Location = new System.Drawing.Point(2, 19);
-            this.testsOutputRichTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.testsOutputRichTextBox.Location = new System.Drawing.Point(2, 18);
+            this.testsOutputRichTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.testsOutputRichTextBox.Name = "testsOutputRichTextBox";
-            this.testsOutputRichTextBox.Size = new System.Drawing.Size(326, 198);
+            this.testsOutputRichTextBox.Size = new System.Drawing.Size(326, 493);
             this.testsOutputRichTextBox.TabIndex = 0;
             this.testsOutputRichTextBox.Text = "";
             // 
             // encryptButton
             // 
-            this.encryptButton.Location = new System.Drawing.Point(3, 221);
-            this.encryptButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.encryptButton.Location = new System.Drawing.Point(4, 515);
+            this.encryptButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.encryptButton.Name = "encryptButton";
             this.encryptButton.Size = new System.Drawing.Size(161, 22);
             this.encryptButton.TabIndex = 2;
@@ -130,15 +143,16 @@ namespace CryptoLab3
             "Encryption time from text bit length",
             "Decryption time from text bit length",
             "Ciphertext growth factor from from text bit length"});
-            this.chartComboBox.Location = new System.Drawing.Point(3, 245);
+            this.chartComboBox.Location = new System.Drawing.Point(4, 569);
+            this.chartComboBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartComboBox.Name = "chartComboBox";
             this.chartComboBox.Size = new System.Drawing.Size(282, 23);
             this.chartComboBox.TabIndex = 6;
             // 
             // plotButton
             // 
-            this.plotButton.Location = new System.Drawing.Point(291, 246);
-            this.plotButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plotButton.Location = new System.Drawing.Point(290, 570);
+            this.plotButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.plotButton.Name = "plotButton";
             this.plotButton.Size = new System.Drawing.Size(38, 22);
             this.plotButton.TabIndex = 5;
@@ -149,7 +163,8 @@ namespace CryptoLab3
             // settingsLabel
             // 
             this.settingsLabel.AutoSize = true;
-            this.settingsLabel.Location = new System.Drawing.Point(3, 224);
+            this.settingsLabel.Location = new System.Drawing.Point(4, 548);
+            this.settingsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.settingsLabel.Name = "settingsLabel";
             this.settingsLabel.Size = new System.Drawing.Size(118, 15);
             this.settingsLabel.TabIndex = 2;
@@ -162,9 +177,9 @@ namespace CryptoLab3
             this.panel1.Controls.Add(this.settingsLabel);
             this.panel1.Controls.Add(this.plotButton);
             this.panel1.Location = new System.Drawing.Point(354, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 271);
+            this.panel1.Size = new System.Drawing.Size(900, 598);
             this.panel1.TabIndex = 2;
             // 
             // MainForm
@@ -172,10 +187,10 @@ namespace CryptoLab3
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(695, 289);
+            this.ClientSize = new System.Drawing.Size(1260, 611);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sequencePanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "MainForm";
             this.Text = "RSA";
             this.sequencePanel.ResumeLayout(false);
@@ -198,6 +213,7 @@ namespace CryptoLab3
         private System.Windows.Forms.Button plotButton;
         private System.Windows.Forms.Label testsOutputLabel;
         private System.Windows.Forms.Button testWrongPQButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

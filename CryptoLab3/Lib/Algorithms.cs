@@ -72,7 +72,7 @@ namespace CryptoLab3.Lib
                 random.NextBytes(simpleRandomInBytes);
                 simpleRandomInBytes[lengthInBytes] = (byte)(simpleRandomInBytes[lengthInBytes] & 127);
                 simpleRandomInBytes[lengthInBytes] = (byte)(simpleRandomInBytes[lengthInBytes] | 64);
-                simpleRandom = new BigInteger(simpleRandomInBytes) >> 7;
+                simpleRandom = new BigInteger(simpleRandomInBytes) >> 7; // чтобы битовая длина была правильной
 
                 while (i < k)
                 {
@@ -84,7 +84,6 @@ namespace CryptoLab3.Lib
                         i++;
                     else
                         break;
-
                 }
             }
             return simpleRandom;

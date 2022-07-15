@@ -16,9 +16,9 @@ namespace CryptoLab3.Lib
             List<int> keySizes = new List<int>();
             List<TimeSpan> factorizationTimes = new List<TimeSpan>();
             int keySize;
-            for (keySize = 70; watch.Elapsed.TotalSeconds < 10; keySize += 10)
+            for (keySize = 70; watch.Elapsed.TotalSeconds < 60; keySize += 10)
             {
-                MyRSA rsa = new MyRSA(keySize, 3);
+                MyRSA rsa = new MyRSA(keySize);
                 BigInteger module = rsa.GetPublicKey().Item2;
                 GC.Collect();
                 watch.Restart();
@@ -27,7 +27,7 @@ namespace CryptoLab3.Lib
                 keySizes.Add(keySize);
                 factorizationTimes.Add(watch.Elapsed);
             }
-            for (; watch.Elapsed.TotalSeconds < 20; keySize+=2)
+            for (; watch.Elapsed.TotalSeconds < 90; keySize+=2)
             {
                 MyRSA rsa = new MyRSA(keySize);
                 BigInteger module = rsa.GetPublicKey().Item2;
@@ -83,7 +83,7 @@ namespace CryptoLab3.Lib
             
             for (int j = 0; j < numSamples; j++)
             {
-                messageLengthInBytes[j] = bytes.Length * j / numSamples;
+                messageLengthInBytes[j] = bytes.Length * (j + 1) / numSamples;
                 byte[] subbytes = new byte[messageLengthInBytes[j]];
                 Array.Copy(bytes, subbytes, messageLengthInBytes[j]);
 
@@ -96,7 +96,7 @@ namespace CryptoLab3.Lib
                 int encryptedLength = 0;
                 foreach (string line in encryptedText)
                     encryptedLength += Encoding.UTF8.GetByteCount(line);
-                growthFactor[j] = encryptedLength / bytes.Length;
+                growthFactor[j] = encryptedLength / subbytes.Length;
 
                 GC.Collect();
                 watch.Restart();
