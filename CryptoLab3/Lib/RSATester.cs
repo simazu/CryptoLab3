@@ -16,7 +16,7 @@ namespace CryptoLab3.Lib
             List<int> keySizes = new List<int>();
             List<TimeSpan> factorizationTimes = new List<TimeSpan>();
             int keySize;
-            for (keySize = 70; watch.Elapsed.TotalSeconds < 60; keySize += 10)
+            for (keySize = 70; watch.Elapsed.TotalSeconds < 40; keySize += 10)
             {
                 MyRSA rsa = new MyRSA(keySize);
                 BigInteger module = rsa.GetPublicKey().Item2;
@@ -27,7 +27,7 @@ namespace CryptoLab3.Lib
                 keySizes.Add(keySize);
                 factorizationTimes.Add(watch.Elapsed);
             }
-            for (; watch.Elapsed.TotalSeconds < 90; keySize+=2)
+            for (; watch.Elapsed.TotalSeconds < 60; keySize+=2)
             {
                 MyRSA rsa = new MyRSA(keySize);
                 BigInteger module = rsa.GetPublicKey().Item2;

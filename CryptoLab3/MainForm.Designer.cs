@@ -41,6 +41,7 @@ namespace CryptoLab3
             this.plotButton = new System.Windows.Forms.Button();
             this.settingsLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.StatusLabel = new System.Windows.Forms.Label();
             this.sequencePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace CryptoLab3
             this.button1.TabIndex = 6;
             this.button1.Text = "Differnt length keys";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.GetKeysButton_Click);
             // 
             // testWrongPQButton
             // 
@@ -173,6 +174,7 @@ namespace CryptoLab3
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.StatusLabel);
             this.panel1.Controls.Add(this.chartComboBox);
             this.panel1.Controls.Add(this.settingsLabel);
             this.panel1.Controls.Add(this.plotButton);
@@ -181,6 +183,14 @@ namespace CryptoLab3
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 598);
             this.panel1.TabIndex = 2;
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.AutoSize = true;
+            this.StatusLabel.Location = new System.Drawing.Point(335, 574);
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(0, 15);
+            this.StatusLabel.TabIndex = 7;
             // 
             // MainForm
             // 
@@ -214,6 +224,7 @@ namespace CryptoLab3
         private System.Windows.Forms.Label testsOutputLabel;
         private System.Windows.Forms.Button testWrongPQButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label StatusLabel;
     }
 }
 

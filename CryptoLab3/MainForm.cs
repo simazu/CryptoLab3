@@ -109,7 +109,7 @@ namespace CryptoLab3
 
             rsa.Encrypt(fileName);
             testsOutputRichTextBox.Clear();
-            testsOutputRichTextBox.Text += "encrypted";
+            testsOutputRichTextBox.Text += $"encrypted to {Directory.GetCurrentDirectory()}\\encrypted.txt ";
         }
 
         private void decryptButton_Click(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace CryptoLab3
             sr.Close();
             MyRSA.Decrypt(fileName, privateKey);
             testsOutputRichTextBox.Clear();
-            testsOutputRichTextBox.Text += "decrypted";
+            testsOutputRichTextBox.Text += $"decrypted to {Directory.GetCurrentDirectory()}\\decrypted.txt ";
         }
 
         private void testWrongPQButton_Click(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace CryptoLab3
             testsOutputRichTextBox.Text += "decrypted to decrypted.txt\n";
         }
 
-        private void plotButton_Click(object sender, EventArgs e)
+        private async void plotButton_Click(object sender, EventArgs e)
         {
             chart1.Series.Clear();
 
@@ -153,7 +153,8 @@ namespace CryptoLab3
             {
                 case 0:
                     {
-                        (int[] x0, TimeSpan[] y0) = RSATester.RSAAttack();
+                        StatusLabel.Text = "Calculation in progress...";
+                        (int[] x0, TimeSpan[] y0) = await Task.Run(() => RSATester.RSAAttack());
 
                         Series series = chart1.Series.Add("Attack");
                         series.ChartType = SeriesChartType.Line;
@@ -162,12 +163,14 @@ namespace CryptoLab3
                         {
                             series.Points.AddXY(x0[i], y0[i].TotalMilliseconds);
                         }
+                        StatusLabel.Text = "";
                         break;
                     }
 
                 case 1:
                     {
-                        (double[] x1, TimeSpan[] y1) = RSATester.FactorizationTimeFromPQDifference();
+                        StatusLabel.Text = "Calculation in progress...";
+                        (double[] x1, TimeSpan[] y1) = await Task.Run(() => RSATester.FactorizationTimeFromPQDifference());
 
                         Series series = chart1.Series.Add("Factorization Time");
                         series.ChartType = SeriesChartType.Line;
@@ -176,13 +179,15 @@ namespace CryptoLab3
                         {
                             series.Points.AddXY(x1[i], y1[i].TotalMilliseconds);
                         }
+                        StatusLabel.Text = "";
                         break;
                     }
 
                 case 2:
+                    StatusLabel.Text = "Calculation in progress...";
                     foreach (int keySize in new[] { 256, 512, 1024 })
                     {
-                        (int[] x2, TimeSpan[] y2, TimeSpan[] ignore, double[] ignore2) = RSATester.TimeAndGrowthFromMessageLength(keySize);
+                        (int[] x2, TimeSpan[] y2, TimeSpan[] ignore, double[] ignore2) = await Task.Run(() => RSATester.TimeAndGrowthFromMessageLength(keySize));
 
                         {
                             Series series = chart1.Series.Add($"{keySize} bit");
@@ -194,12 +199,14 @@ namespace CryptoLab3
                             }
                         }
                     }
+                    StatusLabel.Text = "";
                     break;
 
                 case 3:
+                    StatusLabel.Text = "Calculation in progress...";
                     foreach (int keySize in new[] { 256, 512, 1024 })
                     {
-                        (int[] x3, TimeSpan[] ignore3, TimeSpan[] y3, double[] ignore4) = RSATester.TimeAndGrowthFromMessageLength(keySize);
+                        (int[] x3, TimeSpan[] ignore3, TimeSpan[] y3, double[] ignore4) = await Task.Run(() => RSATester.TimeAndGrowthFromMessageLength(keySize));
                         {
                             Series series = chart1.Series.Add($"{keySize} bit");
                             series.ChartType = SeriesChartType.Line;
@@ -210,12 +217,14 @@ namespace CryptoLab3
                             }
                         }
                     }
+                    StatusLabel.Text = "";
                     break;
 
                 case 4:
+                    StatusLabel.Text = "Calculation in progress...";
                     foreach (int keySize in new[] { 256, 512, 1024 })
                     {
-                        (int[] x4, TimeSpan[] ignore5, TimeSpan[] ignore6, double[] y4) = RSATester.TimeAndGrowthFromMessageLength(keySize);
+                        (int[] x4, TimeSpan[] ignore5, TimeSpan[] ignore6, double[] y4) = await Task.Run(() => RSATester.TimeAndGrowthFromMessageLength(keySize));
                         {
                             Series series = chart1.Series.Add($"{keySize} bit");
                             series.ChartType = SeriesChartType.Line;
@@ -226,6 +235,7 @@ namespace CryptoLab3
                             }
                         }
                     }
+                    StatusLabel.Text = "";
                     break;
 
                 default:
@@ -234,7 +244,7 @@ namespace CryptoLab3
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GetKeysButton_Click(object sender, EventArgs e)
         {
             testsOutputRichTextBox.Clear();
             MyRSA rsa = new MyRSA(128, 65537);
